@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/sbms
+    username: root # ENV VARIABLE: SPRING_DATASOURCE_USERNAME
+    password: Password@2022 # ENV VARIABLE: SPRING_DATASOURCE_PASSWORD
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  mvc:
+    pathmatch:
+      matching-strategy: ANT_PATH_MATCHER
