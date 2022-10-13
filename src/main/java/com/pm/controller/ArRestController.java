@@ -18,9 +18,9 @@ public class ArRestController {
 	
 	@PostMapping("/app")
 	public ResponseEntity<String> createCitizenApp(@RequestBody CitizenApp app){
-		Integer status =  service.createApplication(app);
+		Integer appId =  service.createApplication(app);
 		
-		if(status > 0) {
+		if(appId > 0) {
 			return new ResponseEntity<>("App created with app id "+ appId, HttpStatus.OK);
 		}else {
 			return new ResponseEntity<>("Invalid SSN", HttpStatus.BAD_REQUEST);			
